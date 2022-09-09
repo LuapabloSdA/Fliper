@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Login</title>
+    </head>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            text-align: center;
+            width: 100%;
+            height: 100%;
+        }
+        form{
+            width: 250px;
+            margin: 200px auto;
+            text-align: center;
+        }
+        input{
+            display: block;
+            margin: 10px auto;
+            width: 250px;
+            height: 30px;
+        }
+    </style>
+    <body><br>
+        <h3>Nome: professor
+            Senha: professor</h3>
+        <br>
+        <h3>Nome: aluno
+            Senha: aluno
+        </h3>
+
+
+
+
+
+
+
+        <form id="teste">
+            <h3>Login</h3>
+            <input type="text" placeholder="Login" id="login">
+            <input type="password" placeholder="Senha" id="senha">
+            <button id="Botao">aqui teste</button>
+        </form>
+        
+        
+        <script>
+
+            var Botao = document.querySelector("#Botao");
+            
+            Botao.addEventListener("click", function(event){
+                event.preventDefault();
+                var teste = document.querySelector("#teste");
+
+
+                var login = document.querySelector("#login");
+                var senha = document.querySelector("#senha");
+
+                var log = login.value;
+                var sen = senha.value;
+
+                if (log == "professor" && sen == "professor") {
+                    alert("Oi professor");
+                    location.href="professor.html";
+                }else if(log == "aluno" && sen == "aluno"){
+                    alert("Oi aluno");
+                    location.href="aluno.html"
+                }else {
+                    alert("Usuario ou Senha incorretos");
+                }   
+            })
+            
+
+
+        </script>
+    </body>
+</html>
